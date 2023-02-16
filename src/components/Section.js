@@ -56,7 +56,7 @@ const ButtonGroup = styled.div`
     
     display: flex;  
     margin-bottom: 30px;
-    @media (max-width: 768px) { 
+    @media (max-width: 920px) { 
         flex-direction: column;
     }
     

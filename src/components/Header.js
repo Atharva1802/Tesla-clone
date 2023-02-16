@@ -51,7 +51,7 @@ const Menu = styled.div`
     flex-wrap: nowrap;
   }
 
-  @media(max-width: 758px) {
+  @media(max-width: 920px) {
     display: none;
   }
 `
@@ -65,7 +65,7 @@ const RightMenu = styled.div`
     margin-right: 15px;
   }
 
-    @media(max-width: 758px) {
+    @media(max-width: 920px) {
     display: none;
   }
 `
