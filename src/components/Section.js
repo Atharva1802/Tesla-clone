@@ -44,12 +44,17 @@ const ItemText = styled.div`
 `
 
 const Buttons = styled.div`
+    overflow-y: hidden;
 
 `
 
 const ButtonGroup = styled.div`
+    
     display: flex;  
     margin-bottom: 30px;
+    @media (max-width: 768px) { 
+        flex-direction: column;
+    }
     
 `
 
@@ -67,6 +72,7 @@ const LeftButton = styled.div`
     opacity: 0.95;
     // text-transform: uppercase;
     font-size: 16px
+
     
 `
 
@@ -78,8 +84,8 @@ const RightButton = styled(LeftButton)`
 
 const DownArrow = styled.img`
     height: 40px;
-    cursor: pointer;
     overflow-x: hidden;
+    cursor: pointer;
     animation: animateDown infinite 1.5s;
 `
 
