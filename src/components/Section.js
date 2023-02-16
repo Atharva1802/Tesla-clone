@@ -55,25 +55,31 @@ const ButtonGroup = styled.div`
 
 const LeftButton = styled.div`
     cursor: pointer;    
-    background-color: #171a20cc;
+    background-color: #171a20;
     height: 40px;
     width: 256px;
     color: white;
     display: felx;
     justify-content: center;
+    margin: 8px;
     align-items: center;
-    border-radius: 100px;
-    opacity: 0.85;
-    text-transform: uppercase;
-    font-size: 12px
+    border-radius: 5px;
+    opacity: 0.95;
+    // text-transform: uppercase;
+    font-size: 16px
+    
 `
 
 const RightButton = styled(LeftButton)`
-
+    background-color: white;
+    opacity: 0.65;
+    color: black;
 `
 
 const DownArrow = styled.img`
-    margin-top: 20px;
     height: 40px;
     cursor: pointer;
+    overflow-x: hidden;
+    animation: animateDown infinite 1.5s;
 `
+
