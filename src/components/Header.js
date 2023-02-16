@@ -13,11 +13,15 @@ function Header() {
         <a href="#">Model 3</a>  
         <a href="#">Model X</a>  
         <a href="#">Model Y</a>  
+        <a href="#">Solar Panels</a>  
       </Menu>
       <RightMenu>
         <a href="#">Shop</a>
         <a href="#">Tesla Account</a>
       </RightMenu>
+      <CustomMenu>
+          <a href="#">Menu</a>
+      </CustomMenu>
     </Container>
   )
 }
@@ -28,7 +32,8 @@ const Container = styled.div`
   position: fixed;
   display: flex;
   align-items: center;
-  padding: 0 20px;  
+  justify-content: space-between;
+  padding: 0 30px;  
   top: 0;
   left: 0;
   right: 0;
@@ -36,20 +41,44 @@ const Container = styled.div`
 ` 
 
 const Menu = styled.div`
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
   a {
-    font-weight: 600;
-    padding: 0 10px;
+    font-weight: 550;
+    padding: 0 20px;
     flex-wrap: nowrap;
+  }
+
+  @media(max-width: 758px) {
+    display: none;
   }
 `
 
 const RightMenu = styled.div`
-    a {
-    font-weight: 600;
-    margin-right: 20px;
+  display: flex;
+  align-items: center;
+
+  a {
+    font-weight: 550;
+    margin-right: 15px;
   }
+
+    @media(max-width: 758px) {
+    display: none;
+  }
+`
+
+const CustomMenu = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    font-weight: 550;
+    flex-wrap: nowrap;
+  }
+
+
 `
