@@ -1,8 +1,11 @@
-import React from "react"
+import React, {useState} from "react"
 import styled from "styled-components"
 import CloseIcon from '@material-ui/icons/Close'
+import { Translate } from "@material-ui/icons";
 
 function Header() {
+  const [NavStatus, setNavStatus] = useState(false);
+
   return (
     <Container>
       <a href="#">
@@ -19,13 +22,13 @@ function Header() {
         <a href="#">Shop</a>
         <a href="#">Tesla Account</a>
       </RightMenu>
-      <CustomMenu>
+      <CustomMenu onClick={() => setNavStatus(true)}>
           <a href="#">Menu</a>
       </CustomMenu>
-      <NavMenu>
-        <CustomClose>
-
-        </CustomClose>
+      <NavMenu show = {NavStatus}>
+        <CloseWrapper>
+          <CustomClose onClick={() => setNavStatus(false)}/>
+        </CloseWrapper>
         <li><a href="#">Existing Inventory</a></li>
         <li><a href="#">Used Inventory</a></li>
         <li><a href="#">Trade-in</a></li>
@@ -110,6 +113,8 @@ const NavMenu = styled.div`
   // display: flex;
   flex-direction: cloumn;
   text-align: start;
+  transform: ${props => props.show ? 'translateX(0)': 'translateX(100%)'};
+
   li { 
     padding: 15px 0;
     border-bottom: 1px solid #00000033;
@@ -121,5 +126,10 @@ const NavMenu = styled.div`
 `
 
 const CustomClose = styled(CloseIcon)`
-  
+  cursor: pointer;
+`
+
+const CloseWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `
