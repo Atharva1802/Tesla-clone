@@ -6,7 +6,7 @@ function Section({ title, description, leftBtnText, rightBtnText, backgroundImg 
 
   return (
       <Wrap bgImage={backgroundImg}>
-          <Fade >
+          <Fade bottom>
               <ItemText>
               <h1> {title} </h1>
               <p>{ description }</p>   
