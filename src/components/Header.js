@@ -5,7 +5,7 @@ import styled from "styled-components"
 function Header() {
   return (
     <Container>
-      <a>
+      <a href="#">
         <img src="/images/logo.svg" alt="" />
       </a>  
       <Menu>
@@ -22,6 +22,16 @@ function Header() {
       <CustomMenu>
           <a href="#">Menu</a>
       </CustomMenu>
+      <NavMenu>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Used Inventory</a></li>
+        <li><a href="#">Trade-in</a></li>
+        <li><a href="#">Cybertruck</a></li>
+        <li><a href="#">Roadster</a></li>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Existing Inventory</a></li>
+      </NavMenu>
     </Container>
   )
 }
@@ -32,6 +42,7 @@ const Container = styled.div`
   position: fixed;
   display: flex;
   align-items: center;
+  z-index: 1;
   justify-content: space-between;
   padding: 0 30px;  
   top: 0;
@@ -81,4 +92,27 @@ const CustomMenu = styled.div`
   }
 
 
+`
+
+const NavMenu = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right:0;
+  background: white;
+  width: 300px;
+  z-index: 16;
+  list-style: none;
+  padding: 20px;
+  // display: flex;
+  flex-direction: cloumn;
+  text-align: start;
+  li { 
+    padding: 15px 0;
+    border-bottom: 1px solid #00000033;
+
+    a {
+      font-weight: 600;
+    }
+  }
 `

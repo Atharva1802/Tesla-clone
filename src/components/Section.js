@@ -51,7 +51,6 @@ const Wrap = styled.div`
 const ItemText = styled.div`
     padding-top: 15vh;
     text-align: center;
-
 `
 
 const Buttons = styled.div`
