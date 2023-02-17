@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
+import CloseIcon from '@material-ui/icons/Close'
 
 function Header() {
   return (
@@ -23,6 +23,9 @@ function Header() {
           <a href="#">Menu</a>
       </CustomMenu>
       <NavMenu>
+        <CustomClose>
+
+        </CustomClose>
         <li><a href="#">Existing Inventory</a></li>
         <li><a href="#">Used Inventory</a></li>
         <li><a href="#">Trade-in</a></li>
@@ -115,4 +118,8 @@ const NavMenu = styled.div`
       font-weight: 600;
     }
   }
+`
+
+const CustomClose = styled(CloseIcon)`
+  
 `
