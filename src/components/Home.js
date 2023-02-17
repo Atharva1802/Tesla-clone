@@ -4,7 +4,8 @@ import Section from "./Section";
 
 function Home() {
   return (
-      <Container>  
+    <Container> 
+      
       <Section
         title="Model S"
         description="Order Online for Touchless Delivery"
