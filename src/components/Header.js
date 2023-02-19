@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import styled from "styled-components"
 import CloseIcon from '@material-ui/icons/Close'
 import { Translate } from "@material-ui/icons";
+import { selectCars } from "../features/car/carSlice"; 
 
 function Header() {
   const [NavStatus, setNavStatus] = useState(false);
